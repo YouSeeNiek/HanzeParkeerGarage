@@ -42,7 +42,27 @@ public class Simulator {
             tick();
         }
     }
-
+    
+    public void run100() {
+        for (int i = 0; i < 100; i++) {
+            tick();
+        }
+    }
+    
+    public void run1() {
+    	tick();
+    }
+    
+    public void runX(int x) {
+        if(x > 0) {
+        	for (int i = 0; i < x; i++) {
+                tick();
+            }
+        } else {
+        	System.out.println("Je kan alleen een positief getal invoeren");
+        }
+    }
+    
     private void tick() {
     	advanceTime();
     	handleExit();
