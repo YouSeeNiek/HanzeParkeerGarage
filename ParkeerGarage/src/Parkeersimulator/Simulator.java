@@ -54,12 +54,12 @@ public class Simulator {
     }
     
     public void runX(int x) {
-        if(x > 0) {
+        try {
         	for (int i = 0; i < x; i++) {
                 tick();
             }
-        } else {
-        	System.out.println("Je kan alleen een positief getal invoeren");
+        } catch(ArrayIndexOutOfBoundsException e) {
+        	System.out.println("Je heb een ongeldig getal ingevoerd");
         }
     }
     
